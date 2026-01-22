@@ -1,0 +1,101 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-01-22",
+  "last_optimized_by": "Perplexity AI",
+  
+  "target_roles": [
+    "System Architect",
+    "Senior Backend Engineer",
+    "Technical Lead",
+    "Staff Engineer",
+    "Principal Engineer"
+  ],
+  
+  "target_markets": [
+    "EU Remote (Priority: Germany, Netherlands, France)",
+    "EU Visa Sponsorship (Blue Card)",
+    "Iran Senior/Lead Roles",
+    "Remote-first Companies Globally"
+  ],
+  
+  "positioning": {
+    "primary": "System Design Specialist with Proven Leadership",
+    "secondary": "FinTech Backend Architect",
+    "tertiary": "DevOps-Fluent Full-Stack Engineer"
+  },
+  
+  "key_technologies": [
+    "Node.js",
+    "System Design",
+    "Microservices Architecture",
+    "DevOps",
+    "FinTech",
+    "Distributed Systems",
+    "PostgreSQL",
+    "Docker",
+    "CI/CD"
+  ],
+  
+  "unique_value_propositions": [
+    "Master's in System Design from top-tier university (Amirkabir)",
+    "Experience with high-transaction FinTech ($2M+ monthly volume)",
+    "Built P2P crypto matching engine with advanced algorithms",
+    "Team leadership with Agile/Scrum implementation",
+    "Complete DevOps lifecycle management",
+    "Award-winning innovation projects (ITEX 2024)"
+  ],
+  
+  "optimization_goals": [
+    "Quantified business impact in all experience bullets",
+    "STAR format for key achievements",
+    "System design expertise emphasized throughout",
+    "ATS-friendly keywords naturally integrated",
+    "EU Blue Card eligibility clearly stated",
+    "Leadership and collaboration skills highlighted"
+  ],
+  
+  "keywords_to_maintain": [
+    "System Architecture",
+    "Microservices",
+    "Node.js",
+    "TypeScript",
+    "DevOps",
+    "CI/CD",
+    "Agile",
+    "Scrum",
+    "Team Leadership",
+    "FinTech",
+    "Blockchain",
+    "Distributed Systems",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "AWS"
+  ],
+  
+  "sections": {
+    "profile": {
+      "purpose": "Hook with system design expertise and quantified achievements",
+      "target_length": "4-5 sentences",
+      "must_include": ["Master's in System Design", "FinTech experience", "Leadership", "Open to relocation"]
+    },
+    "experience": {
+      "format": "STAR for key achievements, bullet points for others",
+      "max_bullets_per_role": 20,
+      "emphasis": "Quantified impact, system design decisions, team leadership"
+    },
+    "skills": {
+      "organization": "Priority-based (Core expertise first)",
+      "categories": ["Core Expertise", "Leadership", "FinTech", "Infrastructure", "Databases", "Systems Programming"]
+    }
+  },
+  
+  "ai_editing_rules": {
+    "always_quantify": true,
+    "use_star_for_major_achievements": true,
+    "maintain_ats_compatibility": true,
+    "max_resume_pages": 2,
+    "avoid_buzzwords_without_context": true,
+    "emphasize_business_impact": true
+  }
+}

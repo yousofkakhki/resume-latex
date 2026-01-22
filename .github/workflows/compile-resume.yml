@@ -46,8 +46,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Send to Telegram
-      if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' }}
+    - name: Send to Telegram (Optional)
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -55,6 +54,6 @@ jobs:
         if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
           curl -F "chat_id=$TELEGRAM_CHAT_ID" \
                -F "document=@Yousef-Kakhki-Resume-Latest.pdf" \
-               -F "caption=✅ Resume updated and compiled successfully!\n\nView at: https://github.com/yousofkakhki/resume-latex/releases/latest" \
+               -F "caption=✅ Resume updated and compiled successfully!\n\nView at: https://github.com/${{ github.repository }}/releases/latest" \
                https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument
         fi

@@ -1,0 +1,60 @@
+name: Compile LaTeX Resume to PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '*.tex'
+      - 'modules/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Compile LaTeX to PDF
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: resume.tex
+        latexmk_use_xelatex: false
+        args: -pdf -interaction=nonstopmode -halt-on-error
+    
+    - name: Rename PDF with timestamp
+      run: |
+        TIMESTAMP=$(date +%Y%m%d-%H%M)
+        mv resume.pdf "Yousef-Kakhki-Resume-$TIMESTAMP.pdf"
+        cp "Yousef-Kakhki-Resume-$TIMESTAMP.pdf" Yousef-Kakhki-Resume-Latest.pdf
+    
+    - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf
+        path: "*.pdf"
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      if: github.ref == 'refs/heads/main'
+      with:
+        tag_name: v$(date +%Y%m%d-%H%M)
+        name: Resume Update $(date +%Y-%m-%d)
+        files: |
+          Yousef-Kakhki-Resume-*.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Send to Telegram
+      if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' }}
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+          curl -F "chat_id=$TELEGRAM_CHAT_ID" \
+               -F "document=@Yousef-Kakhki-Resume-Latest.pdf" \
+               -F "caption=✅ Resume updated and compiled successfully!\n\nView at: https://github.com/yousofkakhki/resume-latex/releases/latest" \
+               https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument
+        fi

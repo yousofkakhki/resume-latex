@@ -1,0 +1,192 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Modern CV theme and style options: 'casual', 'classic', 'oldstyle', 'banking'
+% Use symbols instead of awesome icons (no external dependencies) - must be before style
+\moderncvicons{symbols}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Page geometry - ATS-friendly margins
+\usepackage[scale=0.75]{geometry}
+\geometry{
+    a4paper,
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Hyperlinks - important for ATS parsing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfauthor={Yousef Kakhki},
+    pdftitle={Yousef Kakhki - System Architect Resume},
+    pdfsubject={Resume},
+    pdfkeywords={System Design, Backend Engineer, Node.js, DevOps, FinTech, Technical Lead, EU Blue Card}
+}
+
+% Additional packages for better formatting
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=*}
+
+% Personal data
+\name{Yousef}{Kakhki}
+\title{System Architect \& Technical Lead | Node.js • DevOps • FinTech}
+\address{Tehran, Iran}{}{}
+\phone[mobile]{+98 903 815 8460}
+\email{me@kakhki.ir}
+\homepage{kakhki.ir}
+\social[linkedin]{yousefkakhki}
+\extrainfo{EU Blue Card Eligible | Open to Relocation | IELTS 7.5}
+
+%----------------------------------------------------------------------------------
+%            Content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\makecvtitle
+
+%----------------------------------------------------------------------------------------
+%   PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Profile}
+
+\cvitem{}{Senior Software Engineer and System Design Specialist with M.Sc. in Computer Science (System Design) from Amirkabir University of Technology. Proven track record architecting secure, high-performance backend systems for FinTech and blockchain applications. Led technical teams delivering P2P crypto trading platforms processing \$2M+ monthly volume, built payment gateways with 99.9\% uptime, and implemented complete DevOps lifecycles. Specialized in Node.js microservices architecture, distributed systems design, and building scalable infrastructure for high-transaction environments. Open to remote opportunities and EU relocation.}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\cventry{08/2018 -- 08/2021}{Master of Science in Computer Science (System Design)}{Amirkabir University of Technology}{Tehran, Iran}{\textit{Top 3 CS program in Iran}}{%
+    \begin{itemize}
+        \item \textbf{Specialization:} System Architecture and Distributed Systems Design
+        \item \textbf{Blockchain Committee:} Architected virtual coin reward system using Hyperledger Sawtooth \& Node.js for university-wide gamification platform
+        \item \textbf{Thesis:} Developed ``GreedyLearner,'' a gamified Android application for learning computer science algorithms (full-stack mobile + backend system design)
+        \item \textbf{Relevant Coursework:} Distributed Systems, Advanced Algorithms, Software Architecture, Cloud Computing
+    \end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Professional Experience}
+
+\cventry{10/2023 -- 06/2025}{Technical \& AI Team Lead}{\href{https://capitalino.io/}{Capitalino (CITEX Ventures Spin-off)}}{Tehran, Iran (Remote-capable)}{}{%
+    \textit{Recruited by former Vice President of CITEX (Iran's largest crypto exchange) to architect and lead engineering for high-stakes FinTech venture}
+    
+    \textbf{Team Leadership \& Process Management}
+    \begin{itemize}
+        \item Built and scaled engineering team from 0 to 4 developers through structured hiring, technical mentorship, and career development, reducing onboarding time from 3 weeks to 5 days
+        \item Implemented Agile/Scrum methodology with daily standups, bi-weekly sprints, and retrospectives, improving sprint completion rate from 60\% to 92\%
+        \item Established code review culture using GitLab CI/CD with automated testing (Jest, ESLint), reducing production bugs by 40\%
+        \item Deployed self-hosted Jira platform for sprint planning and task management, increasing delivery predictability by 35\%
+        \item Conducted weekly pair programming sessions to upskill junior developers on microservices architecture patterns and system design principles
+    \end{itemize}
+    
+    \textbf{Technical Architecture \& System Design}
+    \begin{itemize}
+        \item Architected secure crypto-to-fiat payment gateway processing \$2M+ monthly transaction volume with 99.9\% uptime, implementing multi-layer security (encryption at rest/transit, rate limiting, fraud detection)
+        \item Designed and built RESTful API backend serving 50,000+ daily requests with sub-200ms P95 latency using Node.js microservices, PostgreSQL, Redis caching, and RabbitMQ message queuing
+        \item Built real-time investor dashboard with WebSocket integration for live financial data visualization, supporting C-level decision-making with sub-second data updates
+        \item Implemented horizontal scaling strategy supporting 10x traffic growth without architecture changes, using Docker Swarm orchestration
+    \end{itemize}
+    
+    \textbf{High-Impact Projects \& Innovation}
+    \begin{itemize}
+        \item Led ``AI Hologram'' interactive exhibit winning \textbf{Best Booth Award at ITEX 2024} (Iran's national innovation exhibition), managing 3-person team under 4-week deadline
+        \item Delivered gamification platform for Shiraz ITEX 2023 handling 500+ concurrent users with real-time leaderboard updates and zero downtime during 3-day event
+        \item Received \textbf{formal letter of recommendation from CEO} citing exceptional technical leadership and consistent delivery of high-stakes projects
+    \end{itemize}
+    
+    \textbf{DevOps \& Infrastructure Management}
+    \begin{itemize}
+        \item Managed complete IT lifecycle: Linux server administration (Ubuntu/CentOS), network security hardening, Docker containerization, and GitLab CI/CD pipeline implementation
+        \item Reduced deployment time from 2 hours to 15 minutes through CI/CD automation, enabling 3-4 production releases per week
+        \item Established monitoring and alerting with Zabbix, achieving 99.8\% infrastructure uptime and reducing mean-time-to-recovery (MTTR) by 65\%
+        \item Implemented disaster recovery procedures including automated database backups, blue-green deployments, and rollback mechanisms
+    \end{itemize}
+}
+
+\cventry{05/2021 -- 05/2022}{Systems Engineer}{\href{https://batna.ir/}{Batna}}{Tehran, Iran}{}{%
+    \textbf{Embedded Linux \& System-Level Optimization}
+    \begin{itemize}
+        \item \textbf{SITUATION:} Company needed secure remote software update capability for 5,000+ deployed embedded Linux devices across distributed locations
+        \item \textbf{TASK:} Design end-to-end Over-the-Air (OTA) software delivery pipeline meeting security, reliability, and bandwidth constraints
+        \item \textbf{ACTION:} Architected complete OTA system using C/Bash, implementing delta updates to minimize bandwidth (reducing package sizes by 70\%), cryptographic signature verification for security, and atomic update mechanisms with automatic rollback on failure
+        \item \textbf{RESULT:} Reduced update deployment time by 70\%, eliminated downtime during software releases, and enabled remote management of geographically distributed devices with zero security incidents
+        \item Executed deep system-level optimizations on Linux kernel (custom kernel compilation, driver modifications) and core services to meet specialized hardware requirements, reducing boot time by 40\% and memory footprint by 25\%
+        \item Developed automated testing framework for embedded systems using QEMU virtualization, catching 85\% of bugs before hardware deployment
+    \end{itemize}
+}
+
+\cventry{11/2019 -- 12/2020}{Backend Developer}{\href{https://avinavisa.com/}{Avin Avisa}}{Tehran, Iran}{}{%
+    \textbf{P2P Cryptocurrency Trading Platform Architecture}
+    \begin{itemize}
+        \item \textbf{SITUATION:} Startup required complete P2P cryptocurrency exchange platform from scratch to compete in emerging Iranian crypto market
+        \item \textbf{TASK:} Architect and build secure, scalable backend system handling financial transactions with strict regulatory compliance
+        \item \textbf{ACTION:} Led full backend development using Node.js, TypeScript, and MongoDB, implementing microservices architecture with separate services for order management, user authentication, transaction processing, and blockchain integration
+        \item \textbf{RESULT:} Delivered production platform serving 5,000+ active traders, processing \$500K+ daily trading volume with 99.9\% uptime and zero financial discrepancies
+        \item Designed and implemented high-performance \textbf{matching engine for order book} using greedy knapsack optimization algorithm, achieving sub-100ms trade execution for 1,000+ concurrent orders with O(n log n) complexity
+        \item Guaranteed financial data integrity through ACID-compliant transaction design with PostgreSQL, implementing two-phase commit protocol and eventual consistency patterns
+        \item Integrated securely with Ethereum blockchain via Web3.js, building automated wallet management system and smart contract interaction layer for decentralized escrow
+        \item Built RESTful API with WebSocket real-time price feeds, reducing latency by 60\% compared to polling approaches and enabling sub-second market data updates
+    \end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS SECTION (Reorganized by Priority)
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+
+\cvitem{\textbf{Core Expertise}}{System Architecture \& Design, Backend Engineering (Node.js, TypeScript), DevOps \& Infrastructure Automation, Microservices Architecture, REST/GraphQL API Design, Database Architecture (PostgreSQL, MongoDB, Redis)}
+
+\cvitem{\textbf{Leadership \& Process}}{Technical Team Leadership, Agile/Scrum Methodology, Code Review \& Mentorship, CI/CD Implementation, Sprint Planning \& Estimation}
+
+\cvitem{\textbf{FinTech \& Security}}{Cryptocurrency Trading Systems, Payment Gateway Integration, Blockchain (Ethereum, Hyperledger Sawtooth), Web3.js, Financial Data Security, Compliance Architecture, Fraud Detection}
+
+\cvitem{\textbf{Infrastructure \& DevOps}}{Linux System Administration (Ubuntu, CentOS), Docker \& Containerization, CI/CD (Jenkins, GitLab), Server Virtualization (VMware, ESXi), Monitoring (Zabbix, Prometheus), Network Security, NGINX, Apache}
+
+\cvitem{\textbf{Databases \& Messaging}}{PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ, Kafka, Elasticsearch, Database Optimization, Sharding, Replication}
+
+\cvitem{\textbf{Systems Programming}}{Embedded Linux, Linux Kernel Customization, AOSP (Android Open Source Project), C, C++, Bash Scripting, System-level Optimization}
+
+\cvitem{\textbf{Additional Technologies}}{Python, Java, PHP, Next.js, HTML/CSS, Entity Framework, TensorFlow/Keras (basics), Git/GitLab, Cloud Security}
+
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications \& Recommendations}
+
+\cventry{}{Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning}{\href{https://www.coursera.org/account/accomplishments/records/6JYRCTBXN94I}{Coursera}}{}{}{Deep Learning certification demonstrating AI/ML fundamentals}
+
+\cventry{}{Formal Letter of Recommendation}{Capitalino CEO}{}{}{Available upon request - cites exceptional technical leadership, system architecture expertise, and consistent delivery of high-stakes projects}
+
+%----------------------------------------------------------------------------------------
+%   LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+\section{Languages}
+
+\cvitemwithcomment{English}{Professional Proficiency}{IELTS 7.5 (C1 level)}
+\cvitemwithcomment{French}{Intermediate}{B2 level}
+\cvitemwithcomment{Persian}{Native}{}
+
+%----------------------------------------------------------------------------------------
+%   ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+\section{Additional Information}
+
+\cvitem{Relocation}{\textbf{EU Blue Card Eligible} - Master's degree from recognized university (Amirkabir in anabin database), 6+ years relevant experience, open to relocation across Europe}
+\cvitem{Work Authorization}{Iranian citizen, no current EU/US work authorization (sponsorship required)}
+\cvitem{Remote Work}{Experienced in remote-first collaboration, async communication, and distributed team management}
+\cvitem{Portfolio}{\href{https://kakhki.ir}{kakhki.ir} - Technical blog, case studies, and system architecture samples}
+
+\end{document}
